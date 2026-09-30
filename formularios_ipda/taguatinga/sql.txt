@@ -1,0 +1,23 @@
+CREATE TABLE usuarios (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE membros (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE,
+    foto_path VARCHAR(255),
+    tel VARCHAR(20),
+    ender VARCHAR(255),
+    nascimento VARCHAR(255), -- Consider using a DATE or DATETIME type for dates
+    tipo_membro VARCHAR(255),
+    batismo VARCHAR(255),    -- Consider using a DATE or DATETIME type for dates
+    cargo VARCHAR(255),
+    setor VARCHAR(255),
+    PRIMARY KEY (id)
+);
