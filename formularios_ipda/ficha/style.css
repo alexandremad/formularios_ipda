@@ -1,0 +1,96 @@
+
+    /* Configurações Gerais */
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #525659;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Estrutura da Folha A4 */
+    .folha {
+        width: 210mm;
+        height: 297mm;
+        padding: 15mm;
+        margin: 10mm auto;
+        background: white;
+        border: 8px solid #FFD700;
+        box-sizing: border-box;
+        position: relative; /* Crucial para a marca d'água */
+        page-break-after: always;
+        overflow: hidden;
+    }
+
+    /* --- MARCA D'ÁGUA --- */
+    .folha::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%; /* Tamanho da marca d'água */
+        height: 80%;
+        background-image: url('img/vertical_português.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.1; /* Transparência (0.1 é ideal) */
+        z-index: 0;   /* Atrás do texto */
+        pointer-events: none; /* Não interfere nos cliques/inputs */
+    }
+
+    /* Garante que o conteúdo fique acima da marca d'água */
+    .folha > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Estilos do Formulário */
+    .header { text-align: center; color: #000080; }
+    .secao { 
+        background: #ffffff; 
+        color: #000080; 
+        font-weight: bold; 
+        text-align: center; 
+        padding: 3px; 
+        margin: 10px 0; 
+        font-size: 12px; 
+        border: 5px solid #FFD700; 
+    }
+    .linha { display: flex; gap: 5px; margin-bottom: 8px; border-bottom: 1px dotted #000; }
+    .linha label { font-size: 10px; font-weight: bold; color: #000080; white-space: nowrap; }
+    .linha input { border: none; outline: none; flex: 1; font-size: 12px; background: transparent; }
+
+    /* Container da Foto 3x4 */
+    .foto-container {
+        width: 30mm;
+        height: 40mm;
+        border: 1px solid #000;
+        position: absolute;
+        top: 10mm;
+        left: 15mm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        cursor: pointer;
+    }
+
+    /* Impressão */
+    @media print {
+        body { background: none; padding: 0; }
+        .no-print, .print-button { display: none !important; }
+        .folha { 
+            margin: 0 !important; 
+            border: 8px solid #FFD700 !important; 
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .folha::before {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    }

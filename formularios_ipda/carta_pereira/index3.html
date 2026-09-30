@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Recomendação IPDA - Sincronizado</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .a4-landscape {
+            width: 297mm;
+            height: 210mm;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: flex;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .form-container {
+            width: 50%;
+            height: 100%;
+            padding: 15mm 10mm;
+            box-sizing: border-box;
+            position: relative;
+            border-right: 1px dashed #ccc;
+        }
+
+        .form-container:last-child {
+            border-right: none;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 55pt;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.04);
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-box {
+            border: 2px solid #000;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 7pt;
+            font-weight: bold;
+            line-height: 1.1;
+            margin-right: 12px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 28pt;
+            font-weight: 900;
+            font-family: Arial, sans-serif;
+            letter-spacing: -1px;
+            line-height: 0.9;
+        }
+
+        .header-info {
+            font-size: 5.5pt;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin-top: 2px;
+            line-height: 1.2;
+        }
+
+        .title {
+            font-size: 19pt;
+            font-weight: bold;
+            margin: 20px 0 25px 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            font-size: 11.5pt;
+            line-height: 2;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        input[type="text"] {
+            border: none;
+            border-bottom: 1px solid #000;
+            font-family: 'Times New Roman', serif;
+            font-size: 12pt;
+            padding: 0 5px;
+            background: transparent;
+        }
+
+        input:focus {
+            outline: none;
+            background-color: #fff9c4;
+        }
+
+        .footer {
+            margin-top: 45px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sig-line {
+            border-top: 1px solid #000;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        .sig-label {
+            font-size: 11pt;
+            font-weight: bold;
+            margin-top: 3px;
+        }
+
+        .sig-sub {
+            font-size: 8pt;
+        }
+
+        .obs {
+            margin-top: 30px;
+            font-size: 7.8pt;
+            line-height: 1.3;
+            font-family: Arial, sans-serif;
+            position: relative;
+            z-index: 1;
+        }
+
+        .obs-bold {
+            font-weight: bold;
+        }
+
+        @media print {
+            body { background-color: white; padding: 0; }
+            .a4-landscape { box-shadow: none; border: none; width: 100%; height: 100%; }
+            .form-container { border-right: none; }
+            input { border-bottom: 1px solid #000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="a4-landscape">
+    <!-- Bloco 1 (Mestre) -->
+    <div class="form-container">
+        <div class="watermark">DEUS É AMOR</div>
+        <div class="header">
+            <div class="logo-box">IGREJA<br>PENTECOSTAL</div>
+            <div class="header-text">
+                <h1>DEUS É AMOR</h1>
+                <div class="header-info">
+                    FUNDADA EM 03 DE JUNHO DE 1962, PELO MISS. DAVID MIRANDA<br>
+                    SEDE MUNDIAL: AV. DO ESTADO, 4568 - LIBERDADE - CEP 01516-000<br>
+                    SÃO PAULO - CAPITAL
+                </div>
+            </div>
+        </div>
+
+        <div class="title">Carta de Recomendação para um dia</div>
+
+        <div class="content">
+            Informamos que este pregador(a) <input type="text" data-sync="nome" style="width: 230px;"><br>
+            o qual congrega nesta congregação <input type="text" data-sync="congregacao" style="width: 230px;"><br>
+            sendo Presbítero ( ), Diácono ( ), Cooperador(a) ( ) ou<br>
+            membro ( ), desde <input type="text" data-sync="d1" style="width: 25px;">/<input type="text" data-sync="m1" style="width: 25px;">/<input type="text" data-sync="a1" style="width: 40px;">, foi enviado para pregar<br>
+            a Palavra de Deus na IPDA de <input type="text" data-sync="destino" style="width: 240px;"><br>
+            nesta data <input type="text" data-sync="d2" style="width: 25px;">/<input type="text" data-sync="m2" style="width: 25px;">/<input type="text" data-sync="a2" style="width: 40px;">. Por conseguinte, recomendamos<br>
+            que o (a) receba com alegria, na comunhão expressa pelos<br>
+            santos: "A graça do Senhor Jesus Cristo, e o amor de Deus, e<br>
+            a comunhão do Espírito Santo seja com todos vós. Amém"<br>
+            (2Co 13.13)<br>
+            Cidade: <input type="text" data-sync="cidade" style="width: 215px;"> UF <input type="text" data-sync="uf" style="width: 45px;"><br>
+            Dia <input type="text" data-sync="dia_ext" style="width: 30px;"> de <input type="text" data-sync="mes_ext" style="width: 100px;"> de <input type="text" data-sync="ano_ext" style="width: 45px;">.
+        </div>
+
+        <div class="footer">
+            <div class="sig-line"></div>
+            <div class="sig-label">Dirigente</div>
+            <div class="sig-sub">(Nome por extenso)</div>
+        </div>
+
+        <div class="obs">
+            <span class="obs-bold">Obs: É proibido tirar fotocópias desta carta. Somente será aceita a original.</span><br>
+            * Deve-se assinalar a respectiva função do pregador(a).<br>
+            * O pregador(a) levará duas cartas à congregação que está destinado a pregar: uma via branca e a outra amarela.<br>
+            * As duas, em seus versos, deverão ser datadas, carimbadas com o endereço da IPDA e assinadas pelo dirigente.<br>
+            * O pregador(a) terá de deixar a carta (via amarela) na IPDA a qual foi enviado e trazer a branca à sua congregação e entregá-la ao seu dirigente.<br>
+            * Esta Carta só vale um dia, ou seja, nesta data.
+        </div>
+    </div>
+
+    <!-- Bloco 2 (Espelho) -->
+    <div class="form-container">
+        <div class="watermark">DEUS É AMOR</div>
+        <div class="header">
+            <div class="logo-box">IGREJA<br>PENTECOSTAL</div>
+            <div class="header-text">
+                <h1>DEUS É AMOR</h1>
+                <div class="header-info">
+                    FUNDADA EM 03 DE JUNHO DE 1962, PELO MISS. DAVID MIRANDA<br>
+                    SEDE MUNDIAL: AV. DO ESTADO, 4568 - LIBERDADE - CEP 01516-000<br>
+                    SÃO PAULO - CAPITAL
+                </div>
+            </div>
+        </div>
+
+        <div class="title">Carta de Recomendação para um dia</div>
+
+        <div class="content">
+            Informamos que este pregador(a) <input type="text" data-sync="nome" style="width: 230px;"><br>
+            o qual congrega nesta congregação <input type="text" data-sync="congregacao" style="width: 230px;"><br>
+            sendo Presbítero ( ), Diácono ( ), Cooperador(a) ( ) ou<br>
+            membro ( ), desde <input type="text" data-sync="d1" style="width: 25px;">/<input type="text" data-sync="m1" style="width: 25px;">/<input type="text" data-sync="a1" style="width: 40px;">, foi enviado para pregar<br>
+            a Palavra de Deus na IPDA de <input type="text" data-sync="destino" style="width: 240px;"><br>
+            nesta data <input type="text" data-sync="d2" style="width: 25px;">/<input type="text" data-sync="m2" style="width: 25px;">/<input type="text" data-sync="a2" style="width: 40px;">. Por conseguinte, recomendamos<br>
+            que o (a) receba com alegria, na comunhão expressa pelos<br>
+            santos: "A graça do Senhor Jesus Cristo, e o amor de Deus, e<br>
+            a comunhão do Espírito Santo seja com todos vós. Amém"<br>
+            (2Co 13.13)<br>
+            Cidade: <input type="text" data-sync="cidade" style="width: 215px;"> UF <input type="text" data-sync="uf" style="width: 45px;"><br>
+            Dia <input type="text" data-sync="dia_ext" style="width: 30px;"> de <input type="text" data-sync="mes_ext" style="width: 100px;"> de <input type="text" data-sync="ano_ext" style="width: 45px;">.
+        </div>
+
+        <div class="footer">
+            <div class="sig-line"></div>
+            <div class="sig-label">Dirigente</div>
+            <div class="sig-sub">(Nome por extenso)</div>
+        </div>
+
+        <div class="obs">
+            <span class="obs-bold">Obs: É proibido tirar fotocópias desta carta. Somente será aceita a original.</span><br>
+            * Deve-se assinalar a respectiva função do pregador(a).<br>
+            * O pregador(a) levará duas cartas à congregação que está destinado a pregar: uma via branca e a outra amarela.<br>
+            * As duas, em seus versos, deverão ser datadas, carimbadas com o endereço da IPDA e assinadas pelo dirigente.<br>
+            * O pregador(a) terá de deixar a carta (via amarela) na IPDA a qual foi enviado e trazer a branca à sua congregação e entregá-la ao seu dirigente.<br>
+            * Esta Carta só vale um dia, ou seja, nesta data.
+        </div>
+    </div>
+</div>
+
+<script>
+    // Seleciona todos os inputs que possuem o atributo data-sync
+    const inputs = document.querySelectorAll('input[data-sync]');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            const syncKey = input.getAttribute('data-sync');
+            const value = input.value;
+            
+            // Procura todos os outros campos com a mesma chave e atualiza
+            document.querySelectorAll(`input[data-sync="${syncKey}"]`).forEach(target => {
+                target.value = value;
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

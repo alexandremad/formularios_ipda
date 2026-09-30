@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FICHA DE CADASTRO DE OBREIRO</title>
+    <link rel="stylesheet" href="style.css>
+    
+
+</head>
+<body>
+
+    
+<div class="no-print" style="position: fixed; top: 10px; right: 10px;"><button onclick="window.print()" style="padding: 15px; cursor: pointer;">IMPRIMIR</button></div>
+
+<div class="folha">
+        <!-- <div class="foto-box" style="margin-top: 0; position: absolute; top: 10mm; left: 15mm; width: 30mm; height: 40mm; border: 1px solid #ccc; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;">
+    <img id="img-preview" src="" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+    
+    <div id="placeholder-text" style="text-align: center;">
+        <span style="font-size: 8px; font-weight: bold;">FOTO 3X4</span><br>
+        <span style="font-size: 7px;">Irmãos de paletó e gravata</span>
+    </div> -->
+    <div class="foto-container" onclick="document.getElementById('input-foto').click()">
+    <span class="instrucao-foto" style="font-size: 8px; font-weight: bold; text-align: center;">
+        FOTO 3X4<br>
+        <span style="font-size: 7px; font-weight: normal;">Clique para selecionar<br>Irmãos de paletó e gravata</span>
+    </span>
+    
+    <img id="img-preview" src="" alt="Foto do Obreiro">
+    
+    <input type="file" id="input-foto" accept="image/*" onchange="previewImagem(event)">
+
+
+    <input type="file" id="input-foto" class="no-print" accept="image/*" style="width: 70px; font-size: 8px; margin-top: 5px; position: absolute; bottom: -25px;">
+</div>
+    
+    <div class="header" style="margin-left: 18mm; min-height: 3cm; display: flex; flex-direction: column; align-items: center;">
+    <img src="./img/horizontal _português.png" alt="Logo" width="410" height="210" style="margin-top: -60px; margin-bottom: -40px;">
+    
+    <h2 style="margin:0; color:red; font-size: 18px;">FICHA DE CADASTRO DE OBREIRO(A)</h2>
+    
+    <p style="margin: 5px 0 0 0; font-size: 7px; color: #000; font-weight: bold; text-align: center; text-transform: uppercase;">
+        FORMULÁRIOS INCOMPLETOS, ILEGÍVEIS E RASURADOS SERÃO DESCONSIDERADOS
+    </p>
+</div>
+
+    <div class="secao">DADOS PESSOAIS</div>
+    <div class="linha"><label>NOME:</label><input type="text"></div>
+    <div class="linha"><label>ENDEREÇO:</label><input type="text"><label>Nº:</label><input type="text" style="width:40px"><label>COMPLEMENTO:</label><input type="text"></div>
+    <div class="linha"><label>BAIRRO:</label><input type="text"><label>CIDADE:</label><input type="text"><label>UF:</label><input type="text" style="width:30px"></div>
+    <div class="linha"><label>RG:</label><input type="text"><label>CPF:</label><input type="text"><label>PASSAPORTE:</label><input type="text"></div>
+    <div class="linha"><label>CIDADE DE NASC.:</label><input type="text"><label>UF:</label><input type="text" style="width:30px"><label>DATA DE NASC.:</label><input type="text"></div>
+    <div class="linha"><label>ESTADO CIVIL:</label><input type="text"><label>DATA DE CASAMENTO:</label><input type="text"></div>
+    <div class="linha"><label>FONE:</label><input type="text"><label>E-MAIL:</label><input type="text"></div>
+    <div class="linha"><label>NOME DO PAI:</label><input type="text"></div>
+    <div class="linha"><label>NOME DA MÃE:</label><input type="text"></div>
+    <div class="linha"><label>PROFISSÃO:</label><input type="text"></div>
+    <div class="linha"><label>OCUPAÇÃO QUE ESTÁ EXERCENDO NO MOMENTO:</label><input type="text"></div>
+
+    <div class="secao">DADOS FAMILIARES</div>
+    <div class="linha">
+    <label>TEM FILHOS?</label>
+    <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+        SIM  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp; 
+        NÃO  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;"> 
+    </span>
+    <label>Nº DE DEPENDENTES (</label>
+    <input type="text" style="width: 9px; text-align: center; border-bottom: none;">
+    <label>)</label>
+    <label style="margin-left: 10px; font-size: 6px;">OBS. ANEXAR CERTIDÃO DE NASCIMENTO DOS DEPENDENTES.</label>
+
+</div>
+    <div class="linha"><label>NOME DO FILHO (A):</label><input type="text"><label>DATA DE NASC.:</label><input type="text"></div>
+    <div class="linha"><label>NOME DO FILHO (A):</label><input type="text"><label>DATA DE NASC.:</label><input type="text"></div>
+    <div class="linha"><label>NOME DO FILHO (A):</label><input type="text"><label>DATA DE NASC.:</label><input type="text"></div>
+    <div class="linha"><label>NOME DO CONJUGE:</label><input type="text"><label>DATA DE NASC.:</label><input type="text"></div>
+    <div class="linha"><label>ELE(A) É CRENTE?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+        SIM  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp; 
+        NÃO  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">     </span>
+    <input type="text" style="width:40px"><label>DE OUTRO MINISTÉRIO? QUAL?</label><input type="text"></div>
+
+    <div class="secao">DADOS MINISTERIAIS DO(A) OBREIRO(A)</div>
+    
+    <div class="linha"><label>EM QUAL DENOMINAÇÃO VOCÊ ACEITOU A JESUS?</label><input type="text"></div>
+    <div class="linha"><label>DATA DA SUA CONVERSÃO:</label><input type="text"><label>DATA DO BATISMO NAS ÁGUAS:</label><input type="text"></div>
+    <div class="linha">
+    <label>FUNÇÃO:</label>
+    <span style="font-size: 9px; color: #000080; margin-left: 5px; font-weight: bold;">
+        VOL. FINANCEIRO(A)  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp;&nbsp;
+        COOPERADOR(A)  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp;&nbsp;
+        DIÁCONO  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp;&nbsp;
+        PRESBÍTERO  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;">  
+        &nbsp;&nbsp;&nbsp;
+        EVANGELISTA  <input type="checkbox" style="width: 12px; height: 12px; vertical-align: middle;"> 
+    </span>
+</div>
+    <div class="linha"><label>ORDENAÇÃO À COOPERADOR (A):</label><input type="text"><label>  ORDENAÇÃO À DIÁCONO:</label><input type="text"></div>
+    <div class="linha"><label>ORDENAÇÃO À PRESBÍTERO:</label><input type="text"><label> ORDENAÇÃO À VOLUNTÁRIO (A) FINANCEIRO (A):</label><input type="text"></div>
+    <div class="linha"><label>ORDENAÇÃO À EVANGELISTA:</label></div>
+    <div class="linha"><label>POSSUI CREDENCIAL?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+        SIM  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;"> 
+        &nbsp;&nbsp; 
+        NÃO  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;"> 
+    </span>
+</div>
+    <div class="linha"><label>RECEBE PREBENDA?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+        SIM  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;">  
+        &nbsp;&nbsp; 
+        NÃO  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;"> 
+    </span>
+
+<input type="text" style="width:2px"><label> HÁ QUANTO TEMPO?:</label><input type="text"><label>DESDE:</label><input type="text"></div>
+
+<div class="linha"><label>VOCÊ DIRIGE ALGUMA IPDA</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+        SIM  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;">  
+        &nbsp;&nbsp; 
+        NÃO  <input type="checkbox" style="width: 10px; height: 10px; vertical-align: middle;"> 
+    </span>
+
+<input type="text"><label>QUAL?:</label><input type="text"></div>
+
+    <div class="linha"><label>ENDEREÇO DA ATUAL CONGREGAÇÃO</label><input type="text"></div>
+    <div class="linha">
+    <label>BAIRRO:</label><input type="text" style="flex: 1;">
+    <label>CIDADE:</label><input type="text" style="flex: 1;">
+    <label>UF:</label><input type="text" style="max-width: 40px;">
+</div>
+
+<div class="linha">
+    <label>CEP:</label><input type="text" style="max-width: 100px;">
+    <label>DIRIGENTE:</label><input type="text" style="flex: 1;">
+    <label>TEL.: (</label>
+    <input type="text" style="max-width: 30px; text-align: center;">
+    <label>)</label>
+    <input type="text" style="flex: 0.5;">
+</div>
+
+<div class="linha">
+    <label>SEDE SETORIAL:</label><input type="text" style="flex: 1;">
+    <label>SUCURSAL:</label><input type="text" style="flex: 1;">
+</div>
+ </div>
+
+
+<div class="folha">
+    
+    <div class="secao">CONTINUAÇÃO - DADOS MINISTERIAIS</div>
+    
+    <div class="linha">
+        <label>VOCÊ JÁ DIRIGIU ALGUMA IGREJA NO EXTERIOR?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+            SIM  <input type="checkbox">  &nbsp; NÃO  <input type="checkbox"> 
+        </span>
+    </div>
+    <div class="linha"><label>EM QUAIS CIDADES?</label><input type="text"></div>
+    <div class="linha"><label>QUAIS PAÍSES?</label><input type="text"></div>
+    
+    <div class="linha" style="margin-top: 10px;">
+        <label>VOCÊ OU ALGUÉM DA SUA FAMÍLIA CONTRAIU ALGUMA DOENÇA NAS CIDADES OU PAÍSES ACIMA?</label>
+    </div>
+    <div class="linha">
+        <span style="font-size: 10px; color: #000080;">
+            SIM  <input type="checkbox">  &nbsp;&nbsp; NÃO  <input type="checkbox"> 
+        </span>
+        <label style="margin-left: 10px;">QUEM?</label><input type="text">
+        <label>QUAIS?</label><input type="text">
+    </div>
+
+    <div class="linha"><label>POR QUAL MOTIVO VOLTOU PARA O BRASIL?</label><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+
+    <div class="linha" style="margin-top: 10px;">
+        <label>FALA ALGUM IDIOMA FLUENTE?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+            SIM  <input type="checkbox">  &nbsp; NÃO  <input type="checkbox"> 
+        </span>
+        <label>QUAIS?</label><input type="text">
+    </div>
+
+    <div class="linha"><label>GRAU DE ESCOLARIDADE</label><input type="text"></div>
+
+    <div class="linha" style="margin-top: 10px; border:none;">
+        <label>EM SUA OPINIÃO, QUAL IPDA VOCÊ OBTEVE UM MAIOR DESEMPENHO EM RELAÇÃO AO SEU MINISTÉRIO PESSOAL? EM QUAL ANO?</label>
+    </div>
+    <div class="linha"><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+
+    <div class="linha" style="margin-top: 10px;">
+        <label>ALGUÉM VEZ FOI DISCIPLINADO?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+            SIM  <input type="checkbox">  &nbsp; NÃO  <input type="checkbox"> 
+        </span>
+        <label>QUANTAS VEZES?</label><input type="text" style="max-width: 80px;">
+    </div>
+    <div class="linha"><label>DELAS: MOTIVO:</label><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+
+    <div class="linha" style="margin-top: 10px;">
+        <label>JÁ FEZ ALGUM CURSO MINISTERIAL?</label>
+        <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+            SIM  <input type="checkbox">  &nbsp; NÃO  <input type="checkbox"> 
+        </span>
+        <label>QUAL?</label><input type="text">
+    </div>
+<br>
+    <h2 style="margin:0; font-size: 11px; color: #000080;">ABAIXO ESCREVA QUAIS IPDAS VOCÊ DIRIGIU, EM QUE ANO E QUANTO TEMPO DUROU SUA GESTÃO EM CADA UMA</h2>
+    
+<br>
+    
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+   
+    <div class="linha"><label>ANO:</label><input type="text" style="max-width: 60px;"><label>IPDA:</label><input type="text"><label>UF:</label><input type="text" style="max-width: 40px;"><label>TEMPO:</label><input type="text"></div>
+<br>
+    <div class="linha"><label>OBS.:</label><input type="text"></div>
+    <div class="linha"><input type="text"></div>
+
+    <div style="margin-top: 30px; display: flex; justify-content: space-around;">
+        <div style="text-align: center;">
+            <strong>X</strong>______________________________________<br>
+            <small>ASSINATURA DO(A) OBREIRO(A)</small>
+        </div>
+        <div style="text-align: center;">
+            <strong>X</strong>______________________________________<br>
+            <small>ASSINATURA DO DIRIGENTE</small>
+        </div>
+    </div>
+
+    <div class="linha" style="border:none; margin-top: 20px;">
+        <input type="text" style="flex: 0.5; border-bottom: 1px solid #000;">
+        <label>,</label>
+        <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+        <label>DE</label>
+        <input type="text" style="flex: 0.3; border-bottom: 1px solid #000; text-align: center;">
+        <label>DE 20</label>
+        <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+    </div>
+
+    <div style="margin-top: 20px; text-align: center; font-size: 8px; font-weight: bold;">
+        CNPJ 43.208.040/0001-36 - AV. DO ESTADO, 5000 - LIBERDADE - SÃO PAULO - CEP 01516-000 - SETOR CREDENCIAIS<br>
+        E-MAIL: CREDENCIAL@IPDA.COM.BR / FONE (11) 3348-0815
+    </div>
+</div>
+
+<div class="folha">
+    <div class="header" style="margin-left: 18mm; min-height: 3cm; display: flex; flex-direction: column; align-items: center;">
+    <img src="./img/horizontal _português.png" alt="Logo" width="410" height="210" style="margin-top: -60px; margin-bottom: -40px;">
+    </div>
+    <div class="header">
+        <h2 style="margin:0; font-size: 16px; color: #000000;">TERMO DE ADESÃO AO QUADRO DE MINISTRO DE CONFISSÃO RELIGIOSA DA</h2>
+        <h2 style="margin:0; font-size: 18px; color: #000000;">IGREJA PENTECOSTAL DEUS É AMOR</h2>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <div class="linha"><label>NOME:</label><input type="text"></div>
+        
+        <div class="linha">
+            <label>NACIONALIDADE:</label><input type="text">
+            <label>ESTADO CIVIL:</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>DATA EM QUE PASSOU A CONGREGAR NA IPDA:</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>EM QUE LOCAL? CIDADE:</label><input type="text">
+            <label>ESTADO:</label><input type="text" style="max-width: 80px;">
+        </div>
+
+        <div class="linha">
+            <label>RECEBIMENTO DE PREBENDA:</label>
+            <span style="font-size: 10px; color: #000080; margin: 0 10px;">
+                SIM ( <input type="checkbox"> ) &nbsp; NÃO ( <input type="checkbox"> )
+            </span>
+            <label>DATA DE INÍCIO:</label>
+            <input type="text" style="max-width: 30px; text-align: center;"> / 
+            <input type="text" style="max-width: 30px; text-align: center;"> / 
+            <input type="text" style="max-width: 50px; text-align: center;">
+        </div>
+
+        <div class="linha" style="border:none; margin-top: 5px;">
+            <span style="font-size: 10px; color: #000080; font-weight: bold;">
+                ( <input type="checkbox"> ) OBREIRO(A) RELIGIOSO(A) &nbsp;
+                ( <input type="checkbox"> ) COOPERADOR(A) &nbsp;
+                ( <input type="checkbox"> ) VOLUNTÁRIO(A) FINANCEIRO(A) &nbsp;
+                ( <input type="checkbox"> ) VOLUNTÁRIO(A)
+            </span>
+        </div>
+        <div class="linha" style="border:none;">
+            <span style="font-size: 10px; color: #000080; font-weight: bold;">
+                ( <input type="checkbox"> ) RECEPCIONISTA &nbsp;
+                ( <input type="checkbox"> ) DIÁCONO &nbsp;
+                ( <input type="checkbox"> ) MINISTRO DE CULTO &nbsp;
+                ( <input type="checkbox"> ) PRESBÍTERO &nbsp;
+                ( <input type="checkbox"> ) PASTOR
+            </span>
+        </div>
+
+        <div class="linha" style="margin-top: 10px;">
+            <label>RG:</label><input type="text">
+            <label>CPF:</label><input type="text">
+        </div>
+
+        <div class="linha"><label>ÚLTIMO ENDEREÇO:</label><input type="text"></div>
+        
+        <div class="linha">
+            <label>ENDEREÇO ATUAL:</label><input type="text">
+            <label>Nº</label><input type="text" style="max-width: 60px;">
+        </div>
+
+        <div class="linha">
+            <label>CIDADE:</label><input type="text">
+            <label>ESTADO:</label><input type="text" style="max-width: 60px;">
+            <label>PAÍS:</label><input type="text" style="max-width: 80px;">
+            <label>TELEFONE:</label><input type="text">
+        </div>
+    </div>
+
+    <div class="texto" style="margin-top: 20px; font-size: 13px; line-height: 1.4;">
+        <p>Por este instrumento particular, de um lado <strong>IGREJA PENTECOSTAL DEUS É AMOR</strong>, entidade religiosa, sem fins lucrativos, inscrita no CNPJ/MF sob nº 43.208.040/0001-36, sediada na Avenida do Estado, nº 4568, Liberdade, São Paulo/SP, por seu representante legal que esta subscreve, doravante denominada simplesmente IGREJA e, de outro lado, o(a) Senhor(a) acima qualificado(a), doravante denominado(a) simplesmente como Ministro de Confissão Religiosa, ou Ministro de Culto, que em atendimento ao chamado Divino, obedecendo o ordenamento jurídico pátrio, a Bíblia Sagrada, e as disposições Estatutárias da IGREJA PENTECOSTAL DEUS É AMOR - IPDA, acordam o quanto segue:</p>
+        
+        <p>A IGREJA PENTECOSTAL DEUS É AMOR, como outras instituições da mesma natureza, sem fins lucrativos, em conformidade com o entendimento atual de nossos tribunais trabalhistas, tem em seu quadro Ministros de Culto, ou seja, Ministro de Confissões Religiosas, os quais seguem uma hierarquia unicamente religiosa, denominados como: Missionários, Pastores, Ministros de Culto, Presbíteros, Diáconos, Cooperadores(as) e Obreiros(as), que como pregadores do Evangelho, são diretamente ligados a Culto Religioso, não sendo seu ministério confundido com a prestação de serviços, empregado ou profissional liberal.</p>
+
+        <p><strong>1)</strong> O trabalho voluntário será exercido de forma não remunerada, com finalidades religiosas, e não gerará vínculo empregatício, nem obrigação de natureza trabalhista, previdenciária ou afim, conforme já entendeu o TRT de MG: “O religioso (... pastor, diácono, pregador ou missionário) atua por espírito de seita ou voto, exerce profissão evangélica a serviço da comunidade religiosa a que pertence, estando excluído do ordenamento jurídico-trabalhista, ou seja, não é empregado. Suas atividades transcendem os limites contratuais. (TRT 03ª R. – RO 00190.2004.108.03.00.0 – 2ª T. – Relª Juíza Alice Monteiro de Barros – DJMG 30.06.2004)”.</p>
+        
+        <p>As atividades realizadas pelo Ministro de Culto, Ministro de Confissões religiosas ou Pastor, decorrem dos votos de humildade e de doação feitos quando do seu ingresso voluntário ao ofício religioso e, em face disso, não gera vínculo empregatício.</p>
+
+        <p><strong>2)</strong> Quanto a eventual prebenda, cita-se o entendimento do TRT/SP: “Os valores recebidos pelo religioso não representam contraprestação pelo serviço religioso desempenhado, pois na atividade religiosa não há a comutatividade inerente ao contrato de emprego, ou seja, no vínculo religioso não há obrigações recíprocas. Correspondem apenas a uma ajuda de custo para a subsistência do religioso, conforme § 13 do art. 22 da Lei nº 8.212/1991.(TRT 02ª R. – Proc. 0002804
+            31.2012.5.02.0036 – (20140524740) – Rel. Marcelo Freire Gonçalves – DJe 07.07.2014).”  </p>
+    
+    </div>
+    </div>
+<div class="folha">
+
+   
+    <div class="texto" style="font-size: 14px; line-height: 1.4; text-align: justify;">
+       
+
+        <p><strong>3)</strong> Os Ministros de Confissões Religiosas são obrigados a contribuírem para a Previdência Social, através de carnê, 
+        e apresentarem anualmente suas declarações de Imposto da Renda na Receita Federal. Isto inclui todos os membros da 
+        Diretoria da Igreja.</p>
+
+        <p><strong>4)</strong> Segue transcrição do texto da Lei 8212/91, art. 22, § 13: “Não se considera como remuneração direta ou indireta, para 
+        os efeitos desta Lei, os valores despendidos pelas entidades religiosas e instituições de ensino vocacional com ministro 
+        de confissão religiosa, membros de instituto de vida consagrada, de congregação ou de ordem religiosa em face do seu 
+        mister religioso ou para sua subsistência desde que fornecidos em condições que independam da natureza e da quanti
+        dade do trabalho executado.”</p>
+
+        <p>Conforme lei acima transcrita (§ 13, art. 22, da lei 8212/91), Missionários, Pastores, Ministros de Culto, Presbíteros, Diáco
+        nos, Cooperadores(as) e Obreiros(as), caso recebam alguma ajuda de custo (prebenda), a mesma será desvinculada de 
+        qualquer natureza de contraprestação do trabalho religioso, ou seja, não se trata de salário, gratificação, bonificação, 13º 
+        salário, abono ou qualquer outra denominação que qualifiquem este pagamento como remuneração profissional.</p>
+
+        <p><strong>5)</strong> O Ministro de Confissão Religiosa que tomar a decisão de se desligar do quadro de Ministros da Igreja Pentecostal 
+        Deus é Amor deverá informar a Diretoria, por escrito, os motivos pelos quais o levaram a desligar-se.</p>
+
+        <p><strong>6)</strong> A Igreja Pentecostal Deus é Amor poderá dispensar de seu quadro de Ministros de Confissões Religiosas, sem prévio 
+        aviso, todo aquele que infringir as normas do Regulamento Interno da Igreja.</p>
+
+        <p><strong>7)</strong> Ministro de Confissão Religiosa, quer seja ele na qualidade de Pastor, Presbítero, Diácono, Cooperador (a) ou obreiro 
+        (a), se compromete, mediante assinatura, a preservar sigilo absoluto das informações por ele obtidas em decorrência do 
+        exercício de seu ministério religioso na Igreja Pentecostal Deus é Amor.</p>
+
+        <p><strong>8)</strong> A classificação hierárquica ascendida pelo Ministro de Culto ou Ministro Confissão Religiosa se dará em avaliações 
+        apreciadas pela Diretoria, tais como: número de almas ganhas, tempo no ministério da IPDA, não ter infringido as normas 
+        do Regulamento Interno da Igreja, etc.</p>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 10px;">
+        <div class="linha" style="border:none;">
+            <input type="text" style="flex: 0.5; border-bottom: 1px solid #000;">
+            <label>,</label>
+            <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+            <label>DE</label>
+            <input type="text" style="flex: 0.3; border-bottom: 1px solid #000; text-align: center;">
+            <label>DE 20</label>
+            <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+        </div>
+        <p style="font-size: 11px; margin-top: 15px;">Por estarem as partes de acordo, por ser expressão de livre vontade, firmam o presente, na presença de testemunhas.</p>
+        
+        <div style="margin-top: 40px; text-align: left;">
+            <label style="font-weight: bold;">X</label>___________________________________________________<br>
+            <small style="margin-left: 20px;">Ministro de Confissão Religiosa (Obreiro (a))</small>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <div class="linha" style="border:none;">
+            <input type="text" style="flex: 0.5; border-bottom: 1px solid #000;">
+            <label>,</label>
+            <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+            <label>DE</label>
+            <input type="text" style="flex: 0.3; border-bottom: 1px solid #000; text-align: center;">
+            <label>DE 20</label>
+            <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+        </div>
+        <div style="margin-top: 40px; text-align: left;">
+            <label style="font-weight: bold;">X</label>___________________________________________________<br>
+            <small style="margin-left: 20px;">Igreja Pentecostal Deus é Amor (Dirigente)</small>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <label style="font-size: 11px; font-weight: bold;">Testemunhas</label><br><br>
+        <div style="margin-bottom: 15px;">
+            1)__________________________________________________
+        </div>
+        <br>
+        <div>
+            2)__________________________________________________
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="folha">
+    <div class="header" style="margin-left: 18mm; min-height: 3cm; display: flex; flex-direction: column; align-items: center;">
+    <img src="./img/horizontal _português.png" alt="Logo" width="410" height="210" style="margin-top: -60px; margin-bottom: -40px;">
+    </div>
+    <div class="header">
+        <h2 style="margin:0; font-size: 18px; color: #000000;">COMPROMISSO DE CUNHO RELIGIOSO E ESPIRITUAL</h2>
+        <h2 style="margin:0; font-size: 18px; color: #000000;">COM A IGREJA PENTECOSTAL DEUS É AMOR,</h2>
+        <p style="margin:0; font-size: 11px; font-weight: bold;">LOCALIZADA NA AV. DO ESTADO, 4568 - SÃO PAULO - SP - BRASIL</p>
+    </div>
+    <br><br><br>
+
+    <div style="margin-top: 20px;">
+        <div class="linha">
+            <label>Eu,</label><input type="text">
+        </div>
+
+        <div class="linha" style="border:none; margin-top: 5px;">
+            <span style="font-size: 10px; color: #000080; font-weight: bold;">
+                 <input type="checkbox">  Voluntário(a) Financeiro(a) &nbsp;&nbsp;
+                 <input type="checkbox">  Cooperador(a) &nbsp;&nbsp;
+                 <input type="checkbox">  Diácono &nbsp;&nbsp;
+                 <input type="checkbox">  Presbítero
+            </span>
+        </div>
+            <div class="linha" style="border:none; margin-top: 5px;">
+            <span style="font-size: 10px; color: #000080; font-weight: bold;">
+                 <input type="checkbox"> Dirigente &nbsp;&nbsp;
+                 <input type="checkbox">  Dirigente &nbsp;&nbsp;
+                 <input type="checkbox">  Conselheiro(a) Espiritual
+            </span>
+        </div>
+        
+        <div class="linha" style="margin-top: 10px;">
+            <label>Titular da Cédula de Identidade RG:</label><input type="text">
+            <label>CPF:</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>Endereço:</label><input type="text">
+            <label>Nº</label><input type="text" style="max-width: 60px;">
+        </div>
+
+        <div class="linha">
+            <label>Bairro:</label><input type="text">
+            <label>Cidade:</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>UF:</label><input type="text" style="max-width: 60px;">
+            <label>, assumo um compromisso com a congregação da Igreja Pentecostal Deus é Amor</label>
+        </div>
+
+        <div class="linha">
+            <label>a qual sou membro, situada na Rua (Av.):</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>nº</label><input type="text" style="max-width: 80px;">
+            <label>, Bairro:</label><input type="text">
+        </div>
+
+        <div class="linha">
+            <label>Cidade:</label><input type="text">
+            <label>, Antiga Sede Central:</label><input type="text">
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="texto" style="margin-top: 20px; font-size: 14px; line-height: 1.5; text-align: justify;">
+        <p>DECLARO que li, compreendi e concordo com o inteiro teor da presente declaração e que me comprometo com todos seus termos, prometendo cumprir com zelo, respeito, ética e compromisso cristão as responsabilidades inerentes a minha função por todo o período que eu estiver incumbido destas responsabilidades, nos termos que seguem:</p>
+        
+        <p><strong>1º</strong> - Tenho plena consciência de que a função incumbida a mim não tem caráter permanente, e que eu posso ser destituído, a qualquer momento, por discricionariedade desta Instituição desde que tal seja até consubstanciado através de documento assinado por 04 (quatro) diretores da Igreja Pentecostal Deus é Amor;</p>
+        
+        <p><strong>2º</strong> - Tenho absoluta consciência, sendo assim, reconheço prometo respeito, lealdade e obediência a Doutrina, Normas e Regulamentos da IPDA (Igreja Pentecostal Deus é Amor), inclusive das determinações em Circulares das quais prometo observação e cumprimento;</p>
+        
+        <p><strong>3º</strong> - Tenho plena e absoluta consciência de que a Função a mim incumbida é de serviço espiritual, e não pode ser confundida em nenhum momento com função administrativa. Declaro meu reconhecimento que somente a Diretoria, regularmente empossada e nos termos da Ata e Estatuto próprios, é quem tem poderes para dirigir administrativamente os atos no local onde estou incumbido de exercer minha função;</p>
+    </div>
+<br>
+    <div style="margin-top: 30px; border-top: 6px solid #000; padding-top: 5px; text-align: center;">
+        <p style="font-size: 9px; font-weight: bold; color: #000;">IGREJA PENTECOSTAL DEUS É AMOR - SEDE MUNDIAL: AV. DO ESTADO, 4568 - LIBERDADE - SÃO PAULO - SP - CEP: 01516-000</p>
+    </div>
+</div>
+
+<div class="folha">
+    <div class="header" style="margin-left: 18mm; min-height: 3cm; display: flex; flex-direction: column; align-items: center;">
+    <img src="./img/horizontal _português.png" alt="Logo" width="410" height="210" style="margin-top: -60px; margin-bottom: -40px;">
+    </div>
+
+    <br>
+    <div class="texto" style="font-size: 11px; line-height: 1.5; text-align: justify;">
+        <p><strong>4º</strong> - Declaro que na eventualidade de minha destituição ou substituição de minha função, independente do motivo e de concordância com o item 10, “eu entregarei meu cargo imediatamente” ao substituto indicado, dando-lhe livre acesso às instalações, chaves, bens e documentos sob minha guarda e responsabilidade;</p>
+        
+        <p><strong>5º</strong> - Declaro ter plena consciência de que é vedado a minha pessoa, na função ora empossada, assinar rescisão ou renovação de contrato de locação, programas de radiodifusão ou qualquer outro contrato de responsabilidade da IPDA, declarando ainda ser conhecedor de que tal incumbência é exclusiva da Diretoria, constituída nos moldes da Ata e Estatuto Social;</p>
+
+        <p><strong>6º</strong> - Declaro que a função incumbida a mim não me dá o direito a retenção ou posse de nenhum bem, seja material ou imaterial da IPDA, sendo certo que tal patrimônio não pode ser expropriação em nenhuma hipótese, tendo absoluta consciência de que não sou possuidor nem titular de nenhum bem que compõe o patrimônio da Congregação ou Local onde fui instituído em minha função;</p>
+
+        <p><strong>7º</strong> - Assumo o compromisso de respeitar os Símbolos e a Doutrina da IPDA, e declaro que não posso retirar placas de qualquer meio de identificação da IPDA em seus imóveis, sejam próprios ou alugados, sem autorização prévia da Diretoria ou por Ordem Judicial;</p>
+
+        <p><strong>8º</strong> - Declaro que tomei ciência dos termos da Ata e Estatutos da Igreja Pentecostal Deus é Amor vigentes no momento de minha nomeação;</p>
+
+        <div class="linha" style="border:none; margin: 10px 0;">
+            <label><strong>9ª</strong> - Eu</label>
+            <input type="text" style="flex: 1; border-bottom: 1px solid #000;">
+            <label>, declaro plena ciência e conhecimento das diretrizes bíblicas,</label>
+        </div>
+        <p>morais, costumeiras, regulamento interno e circulares da IPDA acerca da conduta cristã que por mim deverá ser guardada e respeitada, sendo que, qualquer inobservância aos parâmetros supra estabelecidos enseja o cancelamento de qualquer auxilio, ajuda ou suporte, de forma imediata, da diretoria IPDA.</p>
+
+        <p>Declaro ser sabedor de que perturbar cultos religiosos, apropriar-se de bens da IPDA, agir com excesso de mandato e fazer uso indevido da imagem desta Instituição Religiosa, além de constituir ilícito civil, também pode configurar crime pelo que prometo cumprir meu mandato com lealdade, zelo e compromisso cristão, pelo que assino o presente termo na presença de 02 (duas) testemunhas.</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <div class="linha" style="border:none; justify-content: flex-start;">
+            <label>São Paulo,</label>
+            <input type="text" style="width: 50px; border-bottom: 1px solid #000; text-align: center;">
+            <label>de</label>
+            <input type="text" style="width: 150px; border-bottom: 1px solid #000; text-align: center;">
+            <label>DE 20</label>
+            <input type="text" style="width: 40px; border-bottom: 1px solid #000; text-align: center;">
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+            ___________________________________________________<br>
+            <small>Assinatura do Declarante</small>
+        </div>
+
+        <div style="margin-top: 40px; display: flex; justify-content: space-between;">
+            <div style="width: 45%;">
+                _________________________________________<br>
+                <small>Testemunha</small><br><br><br>
+                <div class="linha" style="border:none;"><br><label>Nome:</label><input type="text" style="border-bottom: 1px solid #000;"></div><br>
+                <div class="linha" style="border:none;"><br><label>Documento:</label><input type="text" style="border-bottom: 1px solid #000;"></div><br>
+            </div>
+
+            <div style="width: 45%;">
+                _________________________________________<br>
+                <small>Testemunha</small><br><br><br>
+                <div class="linha" style="border:none;"><br><label>Nome:</label><input type="text" style="border-bottom: 1px solid #000;"></div><br>
+                <div class="linha" style="border:none;"><br><label>Documento:</label><input type="text" style="border-bottom: 1px solid #000;"></div><br>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+    <div style="margin-top: 40px; border-top: 6px solid #000; padding-top: 5px; text-align: center;">
+        <p style="font-size: 8px; font-weight: bold; color: #000;">IGREJA PENTECOSTAL DEUS É AMOR - SEDE MUNDIAL: AV. DO ESTADO, 4568 - LIBERDADE - SÃO PAULO - SP - CEP: 01516-000</p>
+    </div>
+</div>
+
+<script>
+    function previewImagem(event) {
+        const reader = new FileReader();
+        const imagem = document.getElementById('img-preview');
+        const instrucao = document.querySelector('.instrucao-foto');
+
+        reader.onload = function() {
+            if (reader.readyState === 2) {
+                imagem.src = reader.result;
+                imagem.style.display = 'block'; // Mostra a foto
+                instrucao.style.display = 'none'; // Esconde o texto
+            }
+        }
+
+        if (event.target.files[0]) {
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    }
+</script>
+
+</body>
+</html>
